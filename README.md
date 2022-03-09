@@ -86,7 +86,7 @@ gcc 版本 (CT_GCC_VERSION), linux 内核版本(CT_LINUX_VERSION), glibc 版本(
 
 **注意 1: gcc 的版本一定保证存在 crosstool-ng 补丁, 否则会有很多问题**
 
-**注意 1: 图形化修改后, 一定要和之前的文件(.config.old)比较一下, 它会修改一些默认值, 比如 `CT_GMP_VERSION`**
+**注意 2: 图形化修改后, 一定要和之前的文件(.config.old)比较一下, 它会修改一些默认值, 比如 `CT_GMP_VERSION`**
 
 ## 开始运行
 
@@ -95,4 +95,10 @@ ulimit -n 2048
 ct-ng build
 ```
 
-成功后文件会放到 `x-tool` 目录中
+成功后文件会放到 `x-tool` 目录中, 也可以整体把目录拷贝到其他地方
+
+测试一下
+
+```
+/Volumes/Linux/crosstool/x-tool/bin/arm-unknown-linux-gnueabihf-gcc -v
+```
